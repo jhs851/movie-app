@@ -1,0 +1,86 @@
+.movies .movie {
+    width: 565px;
+    background-color: white;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    border-radius: 5px;
+    color: #adaeb9;
+    cursor: pointer;
+    padding: 20px;
+    transition: transform .3s ease-in-out;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.movies .movie:hover {
+    transform: translateY(-7px);
+}
+
+.movie img {
+    position: relative;
+    flex: 0 0 185px;
+    max-width: 185px;
+    margin-right: 20px;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.movie .movie__data {
+    flex: auto;
+}
+
+.movie .movie__header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.movie .movie__title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #2c2c2c;
+}
+
+.movie .movie__subtitle {
+    margin-top: -8px;
+    font-weight: 300;
+}
+
+.movie .movie__year {
+    margin: 0;
+    font-weight: 300;
+}
+
+.movie .movie__info {
+    padding: 10px 0;
+}
+
+.movie .movie__info + .movie__info {
+    border-top: 1px solid #e5e5e5;
+}
+
+.movie .movie__openat,
+.movie .movie__status,
+.movie .movie__audits,
+.movie .movie__showtimes,
+.movie .movie__nations,
+.movie .movie__directors,
+.movie .movie__genres,
+.movie .movie__distributor {
+    display: flex;
+    align-items: center;
+    color: #2c2c2c;
+    font-size: 13px;
+}
+
+.movie .movie__openat > span,
+.movie .movie__status > span,
+.movie .movie__audits > span,
+.movie .movie__showtimes > span,
+.movie .movie__nations > span,
+.movie .movie__directors > span,
+.movie .movie__genres > span,
+.movie .movie__distributor > span {
+    flex: 0 0 80px;
+    font-weight: 700;
+}
