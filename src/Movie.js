@@ -8,13 +8,13 @@ import "./Movie.css";
 class Movie extends React.Component {
     KOBIS_KEY = 'cee131d2c40a9e5dcfbfe96eabc5aab9';
 
-    KOBIS_MOVIE_URI = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
+    KOBIS_MOVIE_URI = '//www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json';
 
     TMDB_KEY = '426d65cfa3cf702b8ab8816512b9931a';
 
-    TMDB_SEARCH_URI = 'https://api.themoviedb.org/3/search/movie';
+    TMDB_SEARCH_URI = '//api.themoviedb.org/3/search/movie';
 
-    TMDB_POSTER_URI = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
+    TMDB_POSTER_URI = '//image.tmdb.org/t/p/w185_and_h278_bestv2';
 
     state = {};
 
@@ -39,7 +39,9 @@ class Movie extends React.Component {
             })}`
         );
 
-        movieInfo['poster'] = this.TMDB_POSTER_URI + results[0].poster_path;
+        movieInfo['poster'] = results.length
+            ? this.TMDB_POSTER_URI + results[0].poster_path
+            : `//via.placeholder.com/185x278/000000?text=Not found Poster`;
 
         this.parseInfo(movieInfo);
     };

@@ -8,7 +8,7 @@ import "./App.css";
 class App extends React.Component {
     KOBIS_KEY = 'cee131d2c40a9e5dcfbfe96eabc5aab9';
 
-    KOBIS_BOX_OFFICE_URI = 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json';
+    KOBIS_BOX_OFFICE_URI = '//www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json';
 
     state = {
         isLoading: true,
